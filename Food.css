@@ -1,0 +1,224 @@
+/* CSS Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+/* CSS VAriables */
+:root{
+    --navbar-heigth:59px;
+
+}
+
+/* Navigation Bar */
+#navbar{
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* for black strip on the cintent on navbar */
+#navbar::before{    /* space matters */
+    content: "";
+    background-color:white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+
+    /* for showing the content on the black strip */
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#logo{
+  margin: 34px 45px;
+}
+
+#logo img{
+    height: 100px;
+    margin: -26px -21px;
+}
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+
+    /* to delete the bindu bindu in front of the list name  */
+    list-style: none;
+    font-size: 1.3rem;
+    /* background-color: rgb(235, 124, 60); */
+    /* color: black; */
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    color:white;
+    text-decoration: none   ;
+    
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    
+}
+
+#home{
+    display: flex;  /*for horizontal*/
+    flex-direction: column;   /*for the content in column*/
+    padding: 12px 200px;  /*top-botton   Left_right*/
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    color: aliceblue;
+}
+
+
+/* background picture */
+#home::before{
+    content: "";
+    background: url(../F2.jpg) no-repeat center center/cover ;   /* now we in the css folder , we have to go one folder outside so we have to add 2 dots*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
+   
+
+
+    /* for showing the content on the black strip */
+    z-index: -1;
+    opacity: 0.90;
+}
+
+/* utility class */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+    color: black;
+}
+
+
+.h-sec{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+#home{
+    font-size: 1.5rem;
+}
+
+#home p{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: rgb(226, 135, 44);
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+.center{
+    text-align: center;
+}
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 6px 6px;
+    border-radius: 23px;
+    background-color: rgb(228, 222, 226);
+}
+#services .box img{
+    height: 150px;
+    margin: auto;
+    display: block;
+    /* padding-top: 12px; */
+}
+
+#client-section{ 
+    position: relative;
+}
+
+#client-section::before{
+ content: "";
+ position: absolute;
+ background: url('../F7.jpg');
+ width: 100%;
+ height: 100%;
+ z-index: -1;
+ opacity: 0.5;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+}
+
+#clients img{
+    height: 124px;
+}
+/* Contact Section */
+#contact{
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('../F8.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+} 
+
+#contact-box form{
+    width: 40%;
+}
+
+#contact-box label{
+   font-size: 1.3rem;
+   font-family: 'Bree Serif', serif;
+
+}
+
+
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
